@@ -70,7 +70,7 @@ client.get(
       }
 
       // eslint-disable-next-line no-loop-func
-      const buffer = fs.readFileSync("./node_modules/@luminoso/react-sdk/scripts/i18n-templates/index-template.txt");
+      const buffer = fs.readFileSync("./node_modules/@luminoso/react-sdk/i18n/i18n-templates/index-template.txt");
       var fileText = buffer.toString();
 
       fileText = fileText.replace(/{{imports}}/g, imports);
@@ -121,9 +121,7 @@ client.get(
         }
 
         // eslint-disable-next-line no-loop-func
-        const buffer = fs.readFileSync(
-          "./node_modules/@luminoso/react-sdk/scripts/i18n-templates/language-template.txt"
-        );
+        const buffer = fs.readFileSync("./node_modules/@luminoso/react-sdk/i18n/i18n-templates/language-template.txt");
         var languageTemplate = buffer.toString();
 
         languageTemplate = languageTemplate.replace(/{{key}}/g, language.key);
