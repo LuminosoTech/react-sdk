@@ -1,6 +1,6 @@
 {
   "name": "@luminoso/react-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React SDK for Luminoso",
   "license": "Apache-2.0",
   "module": "dist/react-sdk.es.js",
@@ -21,7 +21,7 @@
     "build": "rm -rf dist/ && node ./scripts/build.js",
     "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "test": "jest --silent",
-    "prepublishOnly": "npm run test && npm run build",
+    "prepublishOnly": "npm run build",
     "build-prod:i18n": " NODE_ENV=production SDK_KEY=d1wMhZ9UwLMNyphd9So5yhyVB node scripts/generate-i18n.js"
   },
   "publishConfig": {

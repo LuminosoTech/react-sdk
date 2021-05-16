@@ -1,0 +1,9 @@
+import { Translations } from ".";
+
+const {{key}}: Translations = {
+  translations: {
+    {{dataMap}}
+  },
+};
+
+export default {{key}};

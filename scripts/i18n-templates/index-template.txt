@@ -1,0 +1,14 @@
+import { Resource, ResourceLanguage } from "i18next";
+{{imports}}
+
+export interface TranslationsKeys {
+  {{keysMap}}
+}
+
+export interface Translations extends ResourceLanguage {
+  translations: TranslationsKeys;
+}
+
+export const I18nResource: Resource = {
+  {{resources}}
+};

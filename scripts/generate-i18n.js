@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === "development") {
   hostname = prodHostName;
 }
 
-console.log("\Fetching translation keys...");
+console.log("Fetching translation keys...");
 
 client.get(
   {
@@ -44,8 +44,7 @@ client.get(
     });
 
     res.on("end", () => {
-
-      console.log("\ Got translation keys,  parsing & generating index.ts...");
+      console.log(" Got translation keys,  parsing & generating index.ts...");
 
       const parsedData = JSON.parse(data);
 
@@ -71,7 +70,7 @@ client.get(
       }
 
       // eslint-disable-next-line no-loop-func
-      const buffer = fs.readFileSync("./scripts/i18n-templates/index-template.txt");
+      const buffer = fs.readFileSync("./node_modules/@luminoso/react-sdk/scripts/i18n-templates/index-template.txt");
       var fileText = buffer.toString();
 
       fileText = fileText.replace(/{{imports}}/g, imports);
@@ -83,13 +82,13 @@ client.get(
       });
     });
 
-    res.on("error",(e) => {
-      console.error("Exception: ", e)
-    })
+    res.on("error", (e) => {
+      console.error("Exception: ", e);
+    });
   }
 );
 
-console.log("\Fetching translations...");
+console.log("Fetching translations...");
 
 client.get(
   {
@@ -108,8 +107,7 @@ client.get(
     });
 
     res.on("end", () => {
-
-      console.log("\ Got translations, parsing & generating i18n files...");
+      console.log(" Got translations, parsing & generating i18n files...");
 
       const parsedData = JSON.parse(data);
 
@@ -123,7 +121,9 @@ client.get(
         }
 
         // eslint-disable-next-line no-loop-func
-        const buffer = fs.readFileSync("./scripts/i18n-templates/language-template.txt");
+        const buffer = fs.readFileSync(
+          "./node_modules/@luminoso/react-sdk/scripts/i18n-templates/language-template.txt"
+        );
         var languageTemplate = buffer.toString();
 
         languageTemplate = languageTemplate.replace(/{{key}}/g, language.key);
@@ -135,8 +135,8 @@ client.get(
       }
     });
 
-    res.on("error",(e) => {
-      console.error("Exception: ", e)
-    })
+    res.on("error", (e) => {
+      console.error("Exception: ", e);
+    });
   }
 );
