@@ -1,0 +1,54 @@
+Arguments: 
+  /Users/fabriziorodin-miron/.nvm/versions/node/v12.20.2/bin/node /Users/fabriziorodin-miron/.nvm/versions/node/v12.20.2/bin/yarn add @luminoso/luminoso-sdk
+
+PATH: 
+  /Users/fabriziorodin-miron/.nvm/versions/node/v12.20.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/fabriziorodin-miron/.nvm/versions/node/v12.20.2/bin:/Users/fabriziorodin-miron/.sdkman/candidates/java/current/bin:/Users/fabriziorodin-miron/Library/Android/sdk/tools:/Users/fabriziorodin-miron/Library/Android/sdk/platform-tools:/Users/fabriziorodin-miron/Library/Android/sdk/tools:/Users/fabriziorodin-miron/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.20.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@luminoso%2fluminoso-sdk: Not found
+      at Request.params.callback [as _callback] (/Users/fabriziorodin-miron/.nvm/versions/node/v12.20.2/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/Users/fabriziorodin-miron/.nvm/versions/node/v12.20.2/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (events.js:314:20)
+      at Request.<anonymous> (/Users/fabriziorodin-miron/.nvm/versions/node/v12.20.2/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (events.js:314:20)
+      at IncomingMessage.<anonymous> (/Users/fabriziorodin-miron/.nvm/versions/node/v12.20.2/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (events.js:420:28)
+      at IncomingMessage.emit (events.js:326:22)
+      at endReadableNT (_stream_readable.js:1241:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "react-sdk",
+    "version": "0.0.1",
+    "description": "React SDK for Luminoso",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/LuminosoTech/react-sdk.git"
+    },
+    "author": "Fabrizio Rodin-Miron",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/LuminosoTech/react-sdk/issues"
+    },
+    "homepage": "https://github.com/LuminosoTech/react-sdk#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
