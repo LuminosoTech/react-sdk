@@ -17,7 +17,6 @@
 
 import dts from "rollup-plugin-dts";
 import esbuild from "rollup-plugin-esbuild";
-import { terser } from "rollup-plugin-terser";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { uglify } from "rollup-plugin-uglify";
 import { dependencies } from "./package.json";
