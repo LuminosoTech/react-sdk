@@ -1,6 +1,6 @@
 {
   "name": "@luminoso/react-sdk",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React SDK for Luminoso",
   "license": "Apache-2.0",
   "module": "dist/react-sdk.es.js",
