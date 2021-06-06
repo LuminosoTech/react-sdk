@@ -1,10 +1,10 @@
 {
   "name": "@luminoso/react-sdk",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React SDK for Luminoso",
   "license": "Apache-2.0",
   "module": "dist/react-sdk.es.js",
-  "types": "dist/index.d.ts",
+  "typings": "types/index.d.ts",
   "main": "dist/react-sdk.js",
   "browser": "dist/react-sdk.js",
   "directories": {
@@ -19,11 +19,12 @@
   ],
   "scripts": {
     "tsc": "rm -rf lib/ && tsc",
-    "build": "rm -rf dist/ && node ./scripts/build.js",
+    "tsc:watch": "rm -rf lib/ && tsc --watch",
+    "build": "rm -rf dist/ && rollup -c --environment NODE_ENV:production",
+    "build:watch": "rm -rf dist/ && rollup -c --watch --environment NODE_ENV:development",
     "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "test": "jest --silent",
-    "prepublishOnly": "npm run build",
-    "build-prod:i18n": " NODE_ENV=production SDK_KEY=d1wMhZ9UwLMNyphd9So5yhyVB node scripts/generate-i18n.js"
+    "prepublishOnly": "npm run build"
   },
   "publishConfig": {
     "access": "public"
@@ -38,6 +39,8 @@
   },
   "homepage": "https://github.com/LuminosoTech/react-sdk#readme",
   "dependencies": {
+    "@luminoso/luminoso-sdk": "^0.0.2",
+    "esbuild": "^0.12.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -49,20 +52,20 @@
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-replace": "^2.4.2",
     "@rollup/plugin-typescript": "^8.2.1",
+    "@types/react": "^17.0.9",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "fs-extra": "^10.0.0",
     "prettier": "^2.3.0",
-    "rollup": "^2.48.0",
-    "rollup-plugin-dts": "^3.0.1",
-    "rollup-plugin-esbuild": "^4.2.3",
-    "rollup-plugin-terser": "^7.0.2",
+    "rollup": "^2.50.6",
+    "rollup-plugin-dts": "^3.0.2",
+    "rollup-plugin-esbuild": "^4.5.0",
     "rollup-plugin-uglify": "^6.0.4",
     "ts-jest": "^26.5.6",
     "tslib": "^2.2.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.2"
   }
 }
