@@ -1,4 +1,4 @@
-import { createInstance, User } from "@luminoso/luminoso-sdk";
+import { createInstance, User } from "@luminoso/feature-flags-sdk";
 import React from "react";
 import { LuminosoProvider } from "../store";
 

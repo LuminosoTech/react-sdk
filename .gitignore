@@ -5,3 +5,4 @@ lib
 .npmrc
 dist/
 build/
+yarn.lock
