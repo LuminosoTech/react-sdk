@@ -31,13 +31,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LuminosoTech/react-sdk.git"
+    "url": "git+https://github.com/LuminosoTech/react-feature-flags-sdk.git"
   },
   "author": "Fabrizio Rodin-Miron",
   "bugs": {
-    "url": "https://github.com/LuminosoTech/react-sdk/issues"
+    "url": "https://github.com/LuminosoTech/react-feature-flags-sdk/issues"
   },
-  "homepage": "https://github.com/LuminosoTech/react-sdk#readme",
+  "homepage": "https://github.com/LuminosoTech/react-feature-flags-sdk#readme",
   "dependencies": {
     "@luminoso/feature-flags-sdk": "^0.0.3",
     "esbuild": "^0.12.6",

@@ -1,4 +1,4 @@
-import { User } from '@luminoso/luminoso-sdk';
+import { User } from '@luminoso/feature-flags-sdk';
 import React from 'react';
 
 interface InitializeProps {
